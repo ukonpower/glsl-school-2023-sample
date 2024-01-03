@@ -22,7 +22,7 @@ void main( void ) {
 	outNormal.xz *= rot;
 	outPos.xz *= rot;
 
-	float rotZ = easeInOut( sin( uTime * 0.5 ) * 0.5 + 0.5 ) * PI;
+	float rotZ = easeInOut( sin( uTime * 0.5 ) * 0.5 + 0.5 ) * PI + PI;
 
 	rot = rotate( rotZ );
 	outNormal.xy *= rot;

@@ -1,0 +1,157 @@
+{
+    "name": "Plywood",
+    "id": "plywood",
+    "scraper": "PolyHavenTextureScraper",
+    "fetchUrl": "https://polyhaven.com/a/plywood",
+    "thumbnail": "thumb.png",
+    "variants": [
+        "1k (exr)",
+        "2k (exr)",
+        "4k (exr)",
+        "8k (exr)",
+        "1k (jpg)",
+        "2k (jpg)",
+        "4k (jpg)",
+        "8k (jpg)",
+        "1k (png)",
+        "2k (png)",
+        "4k (png)",
+        "8k (png)"
+    ],
+    "custom": {
+        "variant_data": [
+            [
+                "1k",
+                "exr",
+                {
+                    "diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/plywood/plywood_diff_1k.exr",
+                    "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/plywood/plywood_nor_gl_1k.exr",
+                    "arm": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/plywood/plywood_arm_1k.exr",
+                    "ao": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/plywood/plywood_ao_1k.exr",
+                    "rough": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/plywood/plywood_rough_1k.exr"
+                }
+            ],
+            [
+                "2k",
+                "exr",
+                {
+                    "diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/plywood/plywood_diff_2k.exr",
+                    "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/plywood/plywood_nor_gl_2k.exr",
+                    "arm": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/plywood/plywood_arm_2k.exr",
+                    "ao": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/plywood/plywood_ao_2k.exr",
+                    "rough": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/plywood/plywood_rough_2k.exr"
+                }
+            ],
+            [
+                "4k",
+                "exr",
+                {
+                    "diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/plywood/plywood_diff_4k.exr",
+                    "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/plywood/plywood_nor_gl_4k.exr",
+                    "arm": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/plywood/plywood_arm_4k.exr",
+                    "ao": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/plywood/plywood_ao_4k.exr",
+                    "rough": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/plywood/plywood_rough_4k.exr"
+                }
+            ],
+            [
+                "8k",
+                "exr",
+                {
+                    "diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/plywood/plywood_diff_8k.exr",
+                    "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/plywood/plywood_nor_gl_8k.exr",
+                    "arm": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/plywood/plywood_arm_8k.exr",
+                    "ao": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/plywood/plywood_ao_8k.exr",
+                    "rough": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/plywood/plywood_rough_8k.exr"
+                }
+            ],
+            [
+                "1k",
+                "jpg",
+                {
+                    "diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/plywood/plywood_diff_1k.jpg",
+                    "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/plywood/plywood_nor_gl_1k.jpg",
+                    "arm": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/plywood/plywood_arm_1k.jpg",
+                    "ao": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/plywood/plywood_ao_1k.jpg",
+                    "rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/plywood/plywood_rough_1k.jpg"
+                }
+            ],
+            [
+                "2k",
+                "jpg",
+                {
+                    "diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/plywood/plywood_diff_2k.jpg",
+                    "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/plywood/plywood_nor_gl_2k.jpg",
+                    "arm": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/plywood/plywood_arm_2k.jpg",
+                    "ao": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/plywood/plywood_ao_2k.jpg",
+                    "rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/plywood/plywood_rough_2k.jpg"
+                }
+            ],
+            [
+                "4k",
+                "jpg",
+                {
+                    "diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/plywood/plywood_diff_4k.jpg",
+                    "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/plywood/plywood_nor_gl_4k.jpg",
+                    "arm": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/plywood/plywood_arm_4k.jpg",
+                    "ao": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/plywood/plywood_ao_4k.jpg",
+                    "rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/plywood/plywood_rough_4k.jpg"
+                }
+            ],
+            [
+                "8k",
+                "jpg",
+                {
+                    "diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/plywood/plywood_diff_8k.jpg",
+                    "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/plywood/plywood_nor_gl_8k.jpg",
+                    "arm": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/plywood/plywood_arm_8k.jpg",
+                    "ao": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/plywood/plywood_ao_8k.jpg",
+                    "rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/plywood/plywood_rough_8k.jpg"
+                }
+            ],
+            [
+                "1k",
+                "png",
+                {
+                    "diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/plywood/plywood_diff_1k.png",
+                    "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/plywood/plywood_nor_gl_1k.png",
+                    "arm": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/plywood/plywood_arm_1k.png",
+                    "ao": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/plywood/plywood_ao_1k.png",
+                    "rough": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/plywood/plywood_rough_1k.png"
+                }
+            ],
+            [
+                "2k",
+                "png",
+                {
+                    "diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/plywood/plywood_diff_2k.png",
+                    "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/plywood/plywood_nor_gl_2k.png",
+                    "arm": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/plywood/plywood_arm_2k.png",
+                    "ao": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/plywood/plywood_ao_2k.png",
+                    "rough": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/plywood/plywood_rough_2k.png"
+                }
+            ],
+            [
+                "4k",
+                "png",
+                {
+                    "diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/plywood/plywood_diff_4k.png",
+                    "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/plywood/plywood_nor_gl_4k.png",
+                    "arm": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/plywood/plywood_arm_4k.png",
+                    "ao": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/plywood/plywood_ao_4k.png",
+                    "rough": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/plywood/plywood_rough_4k.png"
+                }
+            ],
+            [
+                "8k",
+                "png",
+                {
+                    "diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/plywood/plywood_diff_8k.png",
+                    "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/plywood/plywood_nor_gl_8k.png",
+                    "arm": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/plywood/plywood_arm_8k.png",
+                    "ao": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/plywood/plywood_ao_8k.png",
+                    "rough": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/plywood/plywood_rough_8k.png"
+                }
+            ]
+        ]
+    }
+}

@@ -14,9 +14,9 @@ void main( void ) {
 	vec4 n = texture( uTex, v * 3.0 );
 	vec4 n2 = texture( uTex, v * 10.0 );
 
-	outColor.xyz = vec3( 0.1 ) + n.y * 0.1;
+	outColor.xyz = vec3( 0.1 ) + n.y * 0.2 + 0.3;
 	outRoughness = 0.2 +  n2.x * n2.x * 0.5;
-	outNormal = normalize( outNormal + n2.xyz * 0.05 );
+	outNormal = normalize( outNormal + n2.xyz );
 	
 	#include <frag_out>
 

@@ -16,7 +16,7 @@ void main( void ) {
 	float dnv = dot( normalize( vViewNormal ), normalize( -vMVPosition ) );
 
 	float emit = step( 0.99, length( vRnd ) );
-	outEmission += vec3( vRnd ) * emit * 0.8;
+	outEmission += vec3( vRnd ) * emit;
 	outEmissionIntensity = 10.0;
 	
 	#include <frag_out>

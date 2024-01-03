@@ -17,7 +17,7 @@ export class FluidParticles extends MXP.Entity {
 
 		super();
 
-		const count = new GLP.Vector( 64, 64 );
+		const count = new GLP.Vector( 32, 32 );
 
 		this.commonUniforms = GLP.UniformsUtils.merge( globalUniforms.time );
 

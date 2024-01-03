@@ -81,6 +81,6 @@ void main( void ) {
 
 	}
 
-	outColor = mix( texture( uSSRBackBuffer, vUv ), col, 0.6 );
+	outColor = mix( texture( uSSRBackBuffer, vUv ), col, 0.4 );
 
 }

@@ -106,10 +106,10 @@ export class MainCamera extends MXP.Entity {
 		this.cameraComponent = this.addComponent( "camera", new RenderCamera( gl ) );
 		this.renderTarget = this.cameraComponent.renderTarget;
 
-		this.addComponent( "controls", new OrbitControls( window.document.body ) );
 		const lookAt = this.addComponent( 'lookAt', new LookAt() );
+		this.addComponent( "controls", new OrbitControls( window.document.body ) );
 		this.addComponent( 'shakeViewer', new ShakeViewer( 0.1, 1.0 ) );
-		// this.addComponent( "rotate", new RotateViewer( 1 ) );
+		this.addComponent( "rotate", new RotateViewer( 3 ) );
 
 		// resolution
 

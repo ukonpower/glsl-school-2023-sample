@@ -12,7 +12,7 @@ void main( void ) {
 
 	vec3 col = vec3(1.0);
 
-	if( sin( vUv.x * 20.0 + vUv.y * 3.0 ) > 0.1 ) {
+	if( sin( vUv.x * 10.0 + vUv.y * 5.0 ) > 0.1 ) {
 		discard;
 	}
 

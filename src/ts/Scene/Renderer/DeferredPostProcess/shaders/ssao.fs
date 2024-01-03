@@ -44,8 +44,8 @@ void main( void ) {
 	vec3 normal = texture( sampler1, vUv ).xyz;
 	float occlusion = 0.0;
 
-	float dist = 0.25;
-	float objectDepth = 0.2;
+	float dist = 1.0;
+	float objectDepth = 1.5;
 
 	vec2 seed = vUv + uFractTime;
 	vec3 random = vec3( random( vec2( seed ) ), random( vec2( seed + 0.25 ) ), random( vec2( seed + 0.5 ) ) ) * 2.0 - 1.0;

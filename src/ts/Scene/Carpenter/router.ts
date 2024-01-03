@@ -1,8 +1,10 @@
 import * as MXP from 'maxpower';
 import { Skybox } from '../Entities/Skybox';
 import { FluidParticles } from '../Entities/FluidParticles';
-import { ChristmasTree } from '../Entities/ChristmasTree';
 import { Present } from '../Entities/Present';
+import { HUD } from '../Entities/HUD';
+import { Floor } from '../Entities/Floor';
+import { Logo } from '../Entities/Logo';
 
 export const router = ( node: MXP.BLidgeNode ) => {
 
@@ -12,17 +14,25 @@ export const router = ( node: MXP.BLidgeNode ) => {
 
 		return new Skybox();
 
-	} else if ( node.class == "FluidParticles" ) {
+	} else if ( node.class == "Particles" ) {
 
 		return new FluidParticles();
-
-	} else if ( node.class == "Plant" ) {
-
-		return new ChristmasTree();
 
 	} else if ( node.class == "Present" ) {
 
 		return new Present();
+
+	} else if ( node.class == "GLSLSchool" ) {
+
+		return new Logo();
+
+	} else if ( node.class == "HUD" ) {
+
+		return new HUD();
+
+	} else if ( node.class == "Floor" ) {
+
+		return new Floor();
 
 	}
 

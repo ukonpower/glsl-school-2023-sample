@@ -18,15 +18,8 @@ class App {
 			<div class="cc">
 				<div class="cw"></div>
 			</div>
-			<h1>NO.${config.no}/${config.title || 'UNTITLED'}</h1>
-			<div class="text">
-				<br/>
-				DATE:${config.date}<br/>
-				<a href="../">../</a>
-			</div>
+			<h1>${config.title || 'UNTITLED'}</h1>
 		`;
-
-		document.title = `${config.no} | HAKIDAME`;
 
 		this.canvasWrap = document.querySelector( '.cw' )!;
 		this.cnavasContainer = document.querySelector( '.cc' )!;
@@ -128,8 +121,11 @@ class App {
 		scale *= 1.0;
 		// scale *= 0.5;
 
-		const blkRatioX = canvasAspect < 1.0 ? 0.8 : 1.0;
-		const blkRatioY = canvasAspect < 1.0 ? 0.7 : 0.7;
+		let blkRatioX = canvasAspect < 1.0 ? 0.8 : 1.0;
+		let blkRatioY = canvasAspect < 1.0 ? 0.7 : 0.7;
+
+		blkRatioX = 1.0;
+		blkRatioY = 1.0;
 
 		const width = window.innerWidth * blkRatioX;
 		const height = window.innerHeight * blkRatioY;

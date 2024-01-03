@@ -2,8 +2,7 @@ import * as GLP from 'glpower';
 
 import floorFrag from './shaders/floor.fs';
 import { globalUniforms } from '~/ts/Globals';
-import { hotGet, hotUpdate } from '~/ts/libs/glpower_local/Framework/Utils/Hot';
-import { Entity } from 'maxpower/Entity';
+import { Entity, Material, hotGet, hotUpdate } from 'maxpower';
 
 export class Floor extends Entity {
 
@@ -11,7 +10,7 @@ export class Floor extends Entity {
 
 		super();
 
-		const mat = this.addComponent( "material", new GLP.Material( {
+		const mat = this.addComponent( "material", new Material( {
 			name: "floor",
 			type: [ "deferred", "shadowMap" ],
 			uniforms: GLP.UniformsUtils.merge( globalUniforms.time, { uNoiseTex: globalUniforms.tex.uNoiseTex } ),

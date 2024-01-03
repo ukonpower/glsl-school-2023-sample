@@ -30,6 +30,7 @@ void main( void ) {
 
 	vec4 ssrCol = texture( uSSRTexture, vUv );
 
-	outColor.xyz = mix( outColor.xyz, ssrCol.xyz, f * ssrCol.w * 0.5 );
+	// outColor.xyz = mix( outColor.xyz, ssrCol.xyz, f * ssrCol.w * 0.2 );
+	outColor.xyz += ssrCol.xyz * 0.1 * f;
 
 }

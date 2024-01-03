@@ -23,7 +23,7 @@ void main( void ) {
 
 	float t = uTime;
 
-	float around = 0.0;
+	float around = 1.0;
 	float aroundInv = 1.0 - around;
 
 	// velocity
@@ -41,15 +41,15 @@ void main( void ) {
 	velocity.xyz += noise * 1.0;
 
 	float rotDir = atan2( position.z, position.x );
-	velocity.x += sin( rotDir ) * 0.0003 * around;
-	velocity.z += -cos( rotDir ) * 0.0003 * around;
+	velocity.x += sin( rotDir ) * 0.0015 * around;
+	velocity.z += -cos( rotDir ) * 0.0015 * around;
 
 	// gravity
 	
-	vec3 gravity = vec3( 0.00001 );
+	vec3 gravity = vec3( 0.0000 );
 	
 	vec3 gPos = vec3( 0.0 );
-	gPos = position.xyz + vec3( 0.0, 0.0, 0.0 );
+	gPos = position.xyz + vec3( 0.0, -9.0, 0.0 );
 	gravity += gPos.xyz * smoothstep( 0.0, 4.0, length( gPos.xyz ) ) * -vec3(0.0001) * aroundInv;
 	velocity.xyz += gravity;
 
@@ -64,7 +64,12 @@ void main( void ) {
 		vec3 p = vec3( 0.0);
 		p.x = sin( vUv.y * TPI ) * around * 13.0;
 		p.z = cos( vUv.y * TPI ) * around * 13.0;
-		position = vec4( p, 0.0 );
+		
+
+		position = vec4( 5.0, 0.0, 0.0, 0.0 );
+		position.xz *= rotate( vUv.x * TPI * 20.0 - uTime * 0.02 );
+
+		// position = vec4( p, 0.0 );
 		velocity = vec4( 0.0 );
 
 	}

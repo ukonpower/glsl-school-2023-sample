@@ -13,7 +13,7 @@ void main( void ) {
 	vBasePos = outPos.xyz;
 
 	float t = uTime;
-	// t = 0.9;
+	t = 0.9;
 
 	float rotX = easeInOut( sin( t + outPos.x * 0.025 ) * 0.5 + 0.5 ) * 2.0 * TPI;
 

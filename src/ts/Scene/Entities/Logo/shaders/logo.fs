@@ -13,7 +13,7 @@ void main( void ) {
 	#include <frag_in>
 
 	float t = uTime * 5.0;
-	// t = 22.;
+	t = 22.;
 
 	vec3 emit = vec3( 
 		smoothstep( -1.0, 1.0, sin( abs( vBasePos.y ) * 8.0 - t * 1.0 ) ),

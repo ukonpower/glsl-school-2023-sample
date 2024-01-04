@@ -5,7 +5,7 @@
 
 // uniforms
 
-uniform sampler2D sampler0; // position, depth
+uniform sampler2D sampler0; // position, 
 uniform sampler2D sampler1; // normal, emissionIntensity
 uniform sampler2D sampler2; // albedo, roughness
 uniform sampler2D sampler3; // emission, metalic
@@ -52,8 +52,6 @@ layout (location = 1) out vec4 glFragOut1;
 // 	vec3 specularColor;
 // };
 
-uniform float uOrnamentCol;
-
 void main( void ) {
 
 	//[
@@ -64,6 +62,7 @@ void main( void ) {
 	vec4 tex4 = texture( sampler4, vUv );
 
 	float occlusion = texture( uSSAOTexture, vUv ).x * 0.4;
+	occlusion = 0.0;
 
 	Geometry geo = Geometry(
 		tex0.xyz,
@@ -107,6 +106,8 @@ void main( void ) {
 	// light shaft
 	
 	outColor.xyz += texture( uLightShaftTexture, vUv ).xyz;
+
+	// out
 
 	glFragOut0 = glFragOut1 = vec4( outColor.xyz, 1.0 );
 

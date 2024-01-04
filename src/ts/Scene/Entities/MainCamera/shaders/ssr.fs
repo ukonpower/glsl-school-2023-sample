@@ -31,8 +31,6 @@ layout (location = 0) out vec4 outColor;
 
 void main( void ) {
 
-	vec3 lightShaftSum = vec3( 0.0 );
-
 	vec3 rayPos = texture( uGbufferPos, vUv ).xyz;
 	vec4 rayViewPos = viewMatrix * vec4(rayPos, 1.0);
 	vec4 depthRayPos = viewMatrix * vec4(rayPos, 1.0);

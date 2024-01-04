@@ -39,7 +39,11 @@ export class RenderCamera extends Camera {
 
 		const forwardBuffer = new GLPowerFrameBuffer( gl, { disableDepthBuffer: true } );
 		forwardBuffer.setDepthTexture( gBuffer.depthTexture );
-		forwardBuffer.setTexture( [ shadingBuffer.textures[ 0 ] ] );
+		forwardBuffer.setTexture( [
+			shadingBuffer.textures[ 0 ],
+			gBuffer.textures[ 0 ],
+			gBuffer.textures[ 1 ],
+		] );
 
 		const uiBuffer = new GLPowerFrameBuffer( gl, { disableDepthBuffer: true } );
 		uiBuffer.setTexture( [ power.createTexture() ] );

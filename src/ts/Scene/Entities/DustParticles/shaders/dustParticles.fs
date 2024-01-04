@@ -12,14 +12,15 @@ void main( void ) {
 
 	float circle = smoothstep( 0.5, 0.0, length( gl_PointCoord.xy - 0.5 ) );
 	
-	if( circle == 0.0 ) discard;
+	// if( circle == 0.0 ) discard;
 
 	Geometry geo = Geometry(
 		vPos,
 		vec3( 0.0, 0.0, 0.0 ),
 		0.0,
 		normalize( cameraPosition - vPos ),
-		vec3( 0.0 )
+		vec3( 0.0 ),
+		0.0
 	);
 
 	vec3 color = vec3( 0.0 );
@@ -42,7 +43,7 @@ void main( void ) {
 
 			// shadow
 
-			shadow = getShadowSmooth( geo.position, spotLightCamera[ LOOP_INDEX ], spotLightShadowMap[ LOOP_INDEX ] );
+			shadow = getShadowSmooth( geo.position, spotLightCamera[ LOOP_INDEX ], spotLightShadowMap[ LOOP_INDEX ], 0.0 );
 
 			// lighting
 

@@ -1,7 +1,6 @@
 import * as MXP from 'maxpower';
 import { Skybox } from '../Entities/Skybox';
 import { FluidParticles } from '../Entities/FluidParticles';
-import { Present } from '../Entities/Present';
 import { HUD } from '../Entities/HUD';
 import { Floor } from '../Entities/Floor';
 import { Logo } from '../Entities/Logo';
@@ -17,10 +16,6 @@ export const router = ( node: MXP.BLidgeNode ) => {
 	} else if ( node.class == "Particles" ) {
 
 		return new FluidParticles();
-
-	} else if ( node.class == "Present" ) {
-
-		return new Present();
 
 	} else if ( node.class == "GLSLSchool" ) {
 

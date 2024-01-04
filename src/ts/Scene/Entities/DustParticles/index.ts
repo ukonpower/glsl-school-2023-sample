@@ -8,9 +8,6 @@ import dustParticlesFrag from './shaders/dustParticles.fs';
 
 export class DustParticles extends MXP.Entity {
 
-	private action: GLP.Vector = new GLP.Vector();
-
-
 	constructor() {
 
 		super();
@@ -18,7 +15,7 @@ export class DustParticles extends MXP.Entity {
 		// geometry
 
 		const range = new GLP.Vector( 10.0, 10.0, 10.0 );
-		const count = 1000;
+		const count = 500;
 
 		const positionArray = [];
 		const sizeArray = [];
@@ -73,14 +70,6 @@ export class DustParticles extends MXP.Entity {
 			} );
 
 		}
-
-	}
-
-	protected updateImpl( event: MXP.EntityUpdateEvent ): void {
-
-		this.action.x *= 0.8;
-		this.action.y *= 0.95;
-
 
 	}
 

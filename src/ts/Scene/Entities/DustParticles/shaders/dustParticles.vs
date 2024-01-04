@@ -18,6 +18,6 @@ void main( void ) {
 	
 	#include <vert_out>
 
-	gl_PointSize = 0.5 + size * 5.0;
+	gl_PointSize = 1.0 + 0.5 + size * 5.0;
 	
 }

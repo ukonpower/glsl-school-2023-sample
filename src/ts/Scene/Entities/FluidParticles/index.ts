@@ -71,7 +71,7 @@ export class FluidParticles extends MXP.Entity {
 
 		const mat = this.addComponent( "material", new MXP.Material( {
 			name: "fluid",
-			type: [ "deferred", "shadowMap" ],
+			type: [ "forward", "shadowMap" ],
 			uniforms: GLP.UniformsUtils.merge( this.commonUniforms, this.gpu.outputUniforms, {
 			} ),
 			vert: MXP.hotGet( 'fluidParticlesVert', fluidParticlesVert ),

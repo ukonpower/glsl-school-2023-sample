@@ -12,14 +12,17 @@ void main( void ) {
 
 	#include <frag_in>
 
+	float t = uTime * 5.0;
+	// t = 22.;
+
 	vec3 emit = vec3( 
-		smoothstep( 0.0, 1.0, sin( abs( vBasePos.y ) * 8.0 - uTime * 5.0 + 0.0 ) ),
-		smoothstep( 0.0, 1.0, sin( abs( vBasePos.y ) * 8.0 - uTime * 5.0 + 0.5) ),
-		smoothstep( 0.0, 1.0, sin( abs( vBasePos.y ) * 8.0 - uTime * 5.0 + 1.0) )
+		smoothstep( -1.0, 1.0, sin( abs( vBasePos.y ) * 8.0 - t * 1.0 ) ),
+		smoothstep( -1.0, 1.0, sin( abs( vBasePos.y ) * 8.0 - t * 1.3 ) ),
+		smoothstep( -1.0, 1.0, sin( abs( vBasePos.y ) * 8.0 - t * 1.6 ) )
 	);
 
-	outEmission = vec3( 1.0 ) * emit * 3.0;
-	outEmissionIntensity = 4.0;
+	outEmission = emit;
+	outEmissionIntensity = smoothstep( 0.5, 1.5, length( emit ) ) * 3.0;
 
 	#include <frag_out>
 

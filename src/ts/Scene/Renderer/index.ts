@@ -290,11 +290,11 @@ export class Renderer extends MXP.Entity {
 
 			// scene
 
-			const prePostprocess = cameraEntity.getComponent<MXP.PostProcess>( 'scenePostProcess' );
+			const scenePostProcess = cameraEntity.getComponent<MXP.PostProcess>( 'scenePostProcess' );
 
-			if ( prePostprocess ) {
+			if ( scenePostProcess ) {
 
-				this.renderPostProcess( prePostprocess, {
+				this.renderPostProcess( scenePostProcess, {
 					viewMatrix: cameraComponent.viewMatrix,
 					projectionMatrix: cameraComponent.projectionMatrix,
 					cameraMatrixWorld: cameraEntity.matrixWorld,
@@ -302,12 +302,12 @@ export class Renderer extends MXP.Entity {
 					cameraFar: cameraComponent.far,
 				} );
 
-				if ( prePostprocess.output ) {
+				if ( scenePostProcess.output ) {
 
-					gl.bindFramebuffer( gl.READ_FRAMEBUFFER, prePostprocess.output.getFrameBuffer() );
+					gl.bindFramebuffer( gl.READ_FRAMEBUFFER, scenePostProcess.output.getFrameBuffer() );
 					gl.bindFramebuffer( gl.DRAW_FRAMEBUFFER, cameraComponent.renderTarget.uiBuffer.getFrameBuffer() );
 
-					const size = prePostprocess.output.size;
+					const size = scenePostProcess.output.size;
 
 					gl.blitFramebuffer(
 						0, 0, size.x, size.y,

@@ -20,5 +20,7 @@
 
 #ifdef IS_FORWARD
 	outColor0 = outColor;
+	outColor1 = vec4( vPos, 1.0 );
+	outColor2 = vec4( outNormal, 1.0 );
 #endif
 //]

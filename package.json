@@ -1,13 +1,13 @@
 {
 	"private": true,
-	"name": "13.hakidame",
+	"name": "glsl-school-2023-plusone",
 	"version": "0.0.1",
 	"description": "",
 	"author": "ukonpower",
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build && cp -rf ./public/. ../hakidame/src/public/13/ && cp ./config.json ../hakidame/src/public/13/"
+		"build": "vite build"
 	},
 	"workspaces": [
 		"packages/*"

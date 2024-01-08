@@ -2,9 +2,8 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import shaderminifier from './plugins/shader-minifier-loader';
-import config from './config';
 
-const basePath = `/${config.no}/`;
+const basePath = process.env.GITHUB_PAGES ? '/glsl-school-2023-sample' : '';
 
 export default defineConfig( {
 	root: 'src',

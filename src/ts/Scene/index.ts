@@ -76,7 +76,7 @@ export class Scene extends GLP.EventEmitter {
 
 		// buffers
 
-		if ( process.env.NODE_ENV == "development" ) {
+		if ( process.env.NODE_ENV == "development" || true ) {
 
 			const frameDebugger = new FrameDebugger( gl );
 
@@ -135,7 +135,7 @@ export class Scene extends GLP.EventEmitter {
 
 		this.renderer.render( renderStack );
 
-		if ( process.env.NODE_ENV == "development" ) {
+		if ( process.env.NODE_ENV == "development" || true ) {
 
 			if ( this.frameDebugger && this.frameDebugger.enable ) {
 
@@ -155,7 +155,7 @@ export class Scene extends GLP.EventEmitter {
 
 		this.camera.resize( resolution );
 
-		if ( process.env.NODE_ENV == "development" ) {
+		if ( process.env.NODE_ENV == "development" || true ) {
 
 			if ( this.frameDebugger ) {
 

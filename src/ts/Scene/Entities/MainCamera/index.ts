@@ -26,8 +26,6 @@ export class MainCamera extends MXP.Entity {
 
 	private baseFov: number;
 
-	private commonUniforms: GLP.Uniforms;
-
 	// camera component
 
 	private cameraComponent: RenderCamera;
@@ -117,19 +115,6 @@ export class MainCamera extends MXP.Entity {
 		this.resolutionInv = new GLP.Vector();
 		this.resolutionBloom = [];
 
-		// uniforms
-
-		this.commonUniforms = GLP.UniformsUtils.merge( {
-			uResolution: {
-				type: "2f",
-				value: this.resolution
-			},
-			uResolutionInv: {
-				type: "2f",
-				value: this.resolutionInv
-			}
-		} );
-
 		// color collection
 
 		this.colorCollection = new MXP.PostProcessPass( {
@@ -186,7 +171,7 @@ export class MainCamera extends MXP.Entity {
 		this.ssComposite = new MXP.PostProcessPass( {
 			name: 'ssComposite',
 			frag: ssCompositeFrag,
-			uniforms: GLP.UniformsUtils.merge( this.commonUniforms, {
+			uniforms: GLP.UniformsUtils.merge( {
 				uGbufferPos: {
 					value: this.renderTarget.gBuffer.textures[ 0 ],
 					type: '1i'
@@ -210,7 +195,7 @@ export class MainCamera extends MXP.Entity {
 		this.dofCoc = new MXP.PostProcessPass( {
 			name: 'dof/coc',
 			frag: dofCoc,
-			uniforms: GLP.UniformsUtils.merge( globalUniforms.time, {
+			uniforms: GLP.UniformsUtils.merge( {
 				uGbufferPos: {
 					value: this.renderTarget.gBuffer.textures[ 0 ],
 					type: "1i"
@@ -306,7 +291,7 @@ export class MainCamera extends MXP.Entity {
 		this.motionBlur = new MXP.PostProcessPass( {
 			name: 'motionBlur',
 			frag: motionBlurFrag,
-			uniforms: GLP.UniformsUtils.merge( this.commonUniforms, {
+			uniforms: GLP.UniformsUtils.merge( {
 				uVelNeighborTex: {
 					value: this.motionBlurNeighbor.renderTarget!.textures[ 0 ],
 					type: '1i'
@@ -330,7 +315,6 @@ export class MainCamera extends MXP.Entity {
 		this.fxaa = new MXP.PostProcessPass( {
 			name: 'fxaa',
 			frag: fxaaFrag,
-			uniforms: this.commonUniforms,
 		} );
 
 		// bloom
@@ -448,7 +432,7 @@ export class MainCamera extends MXP.Entity {
 		this.composite = new MXP.PostProcessPass( {
 			name: 'composite',
 			frag: MXP.hotUpdate( "composite", compositeFrag ),
-			uniforms: GLP.UniformsUtils.merge( this.commonUniforms, {
+			uniforms: GLP.UniformsUtils.merge( globalUniforms.time, {
 				uBloomTexture: {
 					value: this.rtBloomHorizonal.map( rt => rt.textures[ 0 ] ),
 					type: '1iv'

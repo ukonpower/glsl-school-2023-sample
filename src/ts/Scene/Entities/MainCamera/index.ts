@@ -437,18 +437,24 @@ export class MainCamera extends MXP.Entity {
 					value: this.rtBloomHorizonal.map( rt => rt.textures[ 0 ] ),
 					type: '1iv'
 				},
-				uVisible: {
-					value: 0,
-					type: "1f"
-				},
-				uVignette: {
-					value: 0,
-					type: "1f"
-				},
+				uGlitch: {
+					value: 0.0,
+					type: '1f'
+				}
 			} ),
 			defines: {
 				BLOOM_COUNT: this.bloomRenderCount.toString()
 			},
+		} );
+
+		window.addEventListener( "keydown", ( event ) => {
+
+			if ( event.key === "g" ) {
+
+				this.composite.uniforms.uGlitch.value = 1.0 - this.composite.uniforms.uGlitch.value;
+
+			}
+
 		} );
 
 		if ( import.meta.hot ) {

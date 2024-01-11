@@ -9,6 +9,7 @@ uniform float cameraNear;
 uniform float cameraFar;
 
 uniform float uTime;
+uniform float uGlitch;
 
 in vec2 vUv;
 
@@ -24,9 +25,8 @@ void main( void ) {
 
 	// glitch ---------------
 
-	float glitch = smoothstep( 0.7, 1.0, abs(sin( uTime * 3.0 )));
+	float glitch = uGlitch;
 
-	// glitch = 1.0;
 	float g = 0.0;
 
 	g += (random( floor( vUv * 3.3) / 3.3 + uTime ) - 0.5) * 0.2;

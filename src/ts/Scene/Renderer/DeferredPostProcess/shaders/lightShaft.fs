@@ -49,7 +49,7 @@ void main( void ) {
 	float rayStepLength = MARCH_LENGTH / MARCH;;
 	vec3 rayStep = rayDir * rayStepLength;;
 
-	float totalRayLength = random(vUv + fract(uFractTime)) * 1.0 * rayStepLength;
+	float totalRayLength = rayStepLength * random(vUv + fract(uFractTime));
 	rayPos += rayDir * totalRayLength;
 
 	for( int i = 0; i < int( MARCH ); i ++ ) {

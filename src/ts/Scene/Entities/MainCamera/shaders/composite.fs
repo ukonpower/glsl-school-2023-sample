@@ -20,6 +20,7 @@ vec2 lens_distortion(vec2 r, float alpha) {
 }
 
 void main( void ) {
+	
 	vec3 col = vec3( 0.0, 0.0, 0.0 );
 	vec2 uv = vUv;
 
@@ -56,14 +57,10 @@ void main( void ) {
 	#pragma loop_end
 	col.xyz /= 8.0;
 
-
 	#pragma loop_start 4
 		col += texture( uBloomTexture[ LOOP_INDEX ], cuv * s + 0.5 ).xyz * pow( (float(LOOP_INDEX) + 1.0) / 4.0, 1.0 ) * 2.0;
 	#pragma loop_end
 
-	float len = length(cuv);
-	// col *= mix( vec3( 1.1 ), vec3( 1.3, 1.1, 1.0 ),  1.0 - smoothstep( 1.0, 0.0, len ) );
-	
 	outColor = vec4( col, 1.0 );
 
 }

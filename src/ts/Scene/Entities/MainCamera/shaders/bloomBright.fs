@@ -11,9 +11,8 @@ void main( void ) {
 
 	vec4 c = texture( uShadingTex, vUv );
   
-	vec3 f;
-	f = max( c.xyz - 1.0, vec3( 0.0 ) ) / 18.0;
+	vec3 bright = max( c.xyz - 1.0, vec3( 0.0 ) ) / 18.0;
 
-	outColor = vec4( f, 1.0 );
+	outColor = vec4( bright, 1.0 );
 	
 }
